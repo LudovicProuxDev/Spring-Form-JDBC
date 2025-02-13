@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{fragments/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formtest</title>
+</head>
+<body>
+    <main layout:fragment="content">
+        <h1>Formtest</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Kilometers</th>
+                <th>Price</th>
+                <th>Creation</th>
+                <th>Email</th>
+                <th>Phonenumber</th>
+                <th>Good</th>
+                <th>Season</th>
+                <th>Color</th>
+                <th>Image</th>
+                <th>PDF</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="formtest :${listFormtests}">
+                <td th:text="${formtest.id}"></td>
+                <td th:text="${formtest.name}"></td>
+                <td th:text="${formtest.kilometers}"></td>
+                <td th:text="${formtest.price}"></td>
+                <td th:text="${formtest.creation}"></td>
+                <td th:text="${formtest.email}"></td>
+                <td th:text="${formtest.phonenumber}"></td>
+                <td th:text="${formtest.good}"></td>
+                <td th:text="${formtest.season}"></td>
+                <td th:text="${formtest.color}"></td>
+                <td th:text="${formtest.image}"></td>
+                <td th:text="${formtest.pdf}"></td>
+                <td><a th:href="@{|/${formtest.id}|}" class="link-button">Show</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/new}" class="link-button">New</a>
+    </main>
+</body>
+</html>

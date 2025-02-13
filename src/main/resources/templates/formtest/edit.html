@@ -1,0 +1,17 @@
+<html lang="en" layout:decorate="~{fragments/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit Formtest</title>
+</head>
+<body>
+<main  layout:fragment="content">
+    <h2 class="inline-title">Edit Formtest</h2>
+    <form th:action="@{|/${formtest.id}/edit|}" th:object="${formtest}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <div th:replace="~{formtest/_form.html}"></div>
+    </form>
+    <form th:action="@{|/${formtest.id}/delete|}" method="post">
+        <button>Delete</button>
+    </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html lang="en" layout:decorate="~{fragments/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <title>New Formtest</title>
+</head>
+<body>
+<main  layout:fragment="content">
+    <h2 class="inline-title">New Formtest</h2>
+    <form th:action="@{/new}" th:object="${formtest}" method="post">
+        <div th:replace="~{formtest/_form.html}"></div>
+    </form>
+</main>
+</body>
+</html>

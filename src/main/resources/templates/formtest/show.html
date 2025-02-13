@@ -1,0 +1,66 @@
+<html lang="en" layout:decorate="~{fragments/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Show Formtest</title>
+</head>
+<body>
+
+<main  layout:fragment="content">
+    <h1>Formtest</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td th:text="${formtest.id}"></td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td th:text="${formtest.name}"></td>
+            </tr>
+            <tr>
+                <th>Kilometers</th>
+                <td th:text="${formtest.kilometers}"></td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td th:text="${formtest.price}"></td>
+            </tr>
+            <tr>
+                <th>Creation</th>
+                <td th:text="${formtest.creation}"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td th:text="${formtest.email}"></td>
+            </tr>
+            <tr>
+                <th>Phone number</th>
+                <td th:text="${formtest.phonenumber}"></td>
+            </tr>
+            <tr>
+                <th>Good</th>
+                <td th:text="${formtest.good}"></td>
+            </tr>
+            <tr>
+                <th>Season</th>
+                <td th:text="${formtest.season}"></td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td th:text="${formtest.color}"></td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td th:text="${formtest.image}"></td>
+            </tr>
+            <tr>
+                <th>PDF</th>
+                <td th:text="${formtest.pdf}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{|/${formtest.id}/edit|}" class="link-button">Edit</a>
+</main>
+
+</body>
+</html>
